@@ -1,0 +1,480 @@
+table td,
+th {
+    padding: 3px;
+    border-bottom: 1px solid;
+}
+
+#optionChainDatatableDiv {
+    scrollbar-width: thin;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#optionChainDatatableDiv table td:nth-child(2),
+#optionChainDatatableDiv table th:nth-child(2) {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+table th {
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    border-bottom-width: 1px !important;
+}
+
+.red-color {
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgb(255, 170, 170);
+}
+
+.red-border {
+    border: 2px solid red;
+}
+
+.green-color {
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgb(170, 255, 189);
+}
+
+.green-border {
+    border: 2px solid green;
+}
+
+table.dataTable>thead .sorting:before,
+table.dataTable>thead .sorting:after,
+table.dataTable>thead .sorting_asc:before,
+table.dataTable>thead .sorting_asc:after,
+table.dataTable>thead .sorting_desc:before,
+table.dataTable>thead .sorting_desc:after,
+table.dataTable>thead .sorting_asc_disabled:before,
+table.dataTable>thead .sorting_asc_disabled:after,
+table.dataTable>thead .sorting_desc_disabled:before,
+table.dataTable>thead .sorting_desc_disabled:after {
+    top: 5px;
+}
+
+.futuresdata {
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#FuturesDataDiv .container-fluid .row .col-sm-6 {
+    width: 48.5%;
+    margin-right: 5px;
+}
+
+@media (max-width:576px) {
+    #FuturesDataDiv .container-fluid .row .col-sm-6 {
+        width: 100%;
+    }
+
+    .get_sl_tg_orders,
+    #leftOneLine,
+    #leftOneLine button {
+        font-size: 14px;
+    }
+
+    #leftOneLine button {
+        padding: 5px;
+    }
+
+    #leftOneLine .ms-3 {
+        margin-left: 5px !important;
+    }
+
+    #leftOneLine #selectedMarket {
+        font-size: 14px !important;
+    }
+
+    #tableContainer {
+        overflow-x: auto !important;
+    }
+}
+
+@media (max-width: 992px) {
+    #orderTableDiv {
+        padding-left: 0 !important;
+    }
+
+    #Table_2_Column {
+        margin-top: 50px;
+    }
+
+    #Table_2_Column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #allPositionDataTableDiv {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+.Togglecontainer {
+    position: relative;
+}
+
+#orderType,
+#lotSizeSwitch {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    height: 1.15em;
+    width: 3em;
+    background: -o-linear-gradient(315deg, #8175fe, #89befe);
+    background: linear-gradient(135deg, #8175fe, #89befe);
+    -webkit-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    transform: skewX(0deg);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+#orderType:before,
+#lotSizeSwitch:before {
+    font-size: 12px;
+    content: "⬤";
+    position: absolute;
+    color: #2d2936;
+    left: 0.42em;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#orderType:checked,
+#lotSizeSwitch:checked {
+    background: -o-linear-gradient(315deg, #8175fe, #89befe);
+    background: linear-gradient(135deg, #8175fe, #89befe);
+}
+
+#orderType:checked:before,
+#lotSizeSwitch:checked:before {
+    content: "⬤";
+    left: 2.75em;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 1px solid #dee2e6;
+    display: inline-flex;
+    width: 100%;
+    border-radius: 0.375rem;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+
+.number-input button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    top: -3px;
+}
+
+.number-input input[type=number] {
+    font-family: sans-serif;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+    color: #212121 !important;
+}
+
+div[aria-describedby="swal2-html-container"] {
+    width: auto;
+    padding: 10px;
+}
+
+div[aria-describedby="swal2-html-container"] .swal2-actions {
+    margin-top: 0;
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup {
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+    position: absolute !important;
+}
+
+.get_sl_tg_orders {
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#tableContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#tableContainer::-webkit-scrollbar,
+#tableContainer1::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid #212121;
+    text-transform: uppercase;
+    color: #212121;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #fefefe;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.btn2::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #fefefe;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+}
+
+.btn2.active::before {
+    transform: translateY(-25px);
+    height: 0;
+}
+
+.btn2:hover {
+    border: 2px solid #212121;
+}
+
+.btn2 span {
+    position: relative;
+    z-index: 3;
+}
+
+button.accountButton {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+.livemtm {
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cancelorderdiv {
+    border: 4px solid rgb(255, 122, 122)
+}
+
+.modal-header {
+    border-bottom: 1px solid #bbb !important;
+}
+
+/*----------------------
+ Modal css (For Sell) 
+ -------------------- */
+
+.sellModal.modal-content {
+    background: #ffefef !important;
+}
+
+.sellModal .form-control {
+    background-color: #ffdcdc !important;
+    border: 1px solid #f7b3b3 !important;
+}
+
+.sellModal .number-input input[type=number] {
+    border: solid #f7b3b3;
+}
+
+.sellModal .number-input {
+    border: 1px solid #f7b3b3;
+}
+
+/*----------------------
+ Modal css (For Buy) 
+ -------------------- */
+
+.buyModal.modal-content {
+    background: #effff0 !important;
+}
+
+.buyModal .form-control {
+    background-color: #edffe4 !important;
+    border: 1px solid #14a500 !important;
+}
+
+.buyModal .number-input {
+    border: 1px solid #14a500;
+}
+
+.buyModal .number-input input[type=number] {
+    border: solid #14a500;
+}
+
+#allPositionDatatable td {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.disabled-item {
+    opacity: 0.5;
+    /* You can adjust the opacity to make it look disabled */
+    pointer-events: none;
+    /* Disable pointer events to prevent interaction */
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        --bs-modal-width: 900px;
+    }
+}
+
+.bsModal {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 16px !important;
+}
+
+#outputTable td:first-child {
+    font-weight: 600;
+    color: #8494ef;
+    border-bottom: 1px solid black;
+}
+
+@media (min-width:576px) and (max-width:992px) {
+    .modal-dialog {
+        max-width: 95%;
+    }
+
+    .number-input.w-25 {
+        width: 50% !important;
+    }
+}
+
+#OrderBookTable_wrapper .dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+
+#OrderBookTable th:nth-child(1),
+#OrderBookTable td:nth-child(1) {
+    max-width: 40px !important;
+}
+
+#OrderBookTable th:nth-child(3),
+#OrderBookTable td:nth-child(3),
+#OrderBookTable th:nth-child(4),
+#OrderBookTable td:nth-child(4),
+#OrderBookTable th:nth-child(5),
+#OrderBookTable td:nth-child(5),
+#OrderBookTable th:nth-child(7),
+#OrderBookTable td:nth-child(7),
+#OrderBookTable th:nth-child(8),
+#OrderBookTable td:nth-child(8),
+#OrderBookTable th:nth-child(9),
+#OrderBookTable td:nth-child(9),
+#OrderBookTable th:nth-child(10),
+#OrderBookTable td:nth-child(10),
+#OrderBookTable th:nth-child(11),
+#OrderBookTable td:nth-child(11),
+#OrderBookTable th:nth-child(12),
+#OrderBookTable td:nth-child(12) {
+    max-width: 20px !important;
+}
+
+#OrderBookTable th:nth-child(6),
+#OrderBookTable td:nth-child(6) {
+    max-width: 30px !important;
+}
