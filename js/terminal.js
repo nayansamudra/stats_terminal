@@ -495,15 +495,15 @@ function unmergeItems(payload) {
             return
         }
 
-        if (limit != '' && limit != null && limit > 0 && qty != '') {
+        if (!isNaN(limit) && limit != null && limit >= 0 && qty != '') {
             unmergedPayload.push({ "account": account, "instrument": instrument, "order_type": "NRML", "limit": limit, "qty": qty, "b_s": b_s_nrml, "stoploss": null, "target": null })
         }
 
-        if (stoploss != '' && stoploss != null && stoploss > 0 && qty != '') {
+        if (!isNaN(stoploss) && stoploss != null && stoploss > 0 && qty != '') {
             unmergedPayload.push({ "account": account, "instrument": instrument, "order_type": "STOPLOSS", "stoploss": stoploss, "qty": qty, "b_s": b_s, "limit": null, "target": null })
         }
 
-        if (target != '' && target != null && target > 0 && qty != '') {
+        if (!isNaN(target) && target != null && target > 0 && qty != '') {
             unmergedPayload.push({ "account": account, "instrument": instrument, "order_type": "TARGET", "target": target, "qty": qty, "b_s": b_s, "limit": null, "stoploss": null })
         }
     }
@@ -945,10 +945,10 @@ function clearAllData() {
 function updateBasketPayload(checkbox) {
     let parentElement = checkbox.parentNode;
     let buttons = parentElement.getElementsByTagName('button');
-    if(currentMarket == 'Futures') {
+    if (currentMarket == 'Futures') {
         buttons = parentElement.parentNode.getElementsByTagName('button');
     }
-    
+
     let instrument = checkbox.dataset.key;
     let value = parseFloat(checkbox.dataset.val);
     let bs
@@ -1035,16 +1035,17 @@ function placeOrder() {
     let stoploss = parseInt($('#sl').val())
     let target = parseInt($('#tg').val())
 
-    if (limit != '' && limit != null && limit > 0 && qty != '') {
-        payload.push({ "instrument": instrument, "order_type": "NRML", "limit": limit, "qty": qty, "b_s": b_s_nrml, "stoploss": null, "target": null })
+    if (!isNaN(limit) && limit != null && limit >= 0 && qty !== '') {
+        console.log('here');
+        payload.push({ "instrument": instrument, "order_type": "NRML", "limit": limit, "qty": qty, "b_s": b_s_nrml, "stoploss": null, "target": null });
     }
 
-    if (stoploss != '' && stoploss != null && stoploss > 0 && qty != '') {
-        payload.push({ "instrument": instrument, "order_type": "STOPLOSS", "stoploss": stoploss, "qty": qty, "b_s": b_s, "limit": null, "target": null })
+    if (!isNaN(stoploss) && stoploss != null && stoploss > 0 && qty !== '') {
+        payload.push({ "instrument": instrument, "order_type": "STOPLOSS", "stoploss": stoploss, "qty": qty, "b_s": b_s, "limit": null, "target": null });
     }
 
-    if (target != '' && target != null && target > 0 && qty != '') {
-        payload.push({ "instrument": instrument, "order_type": "TARGET", "target": target, "qty": qty, "b_s": b_s, "limit": null, "stoploss": null })
+    if (!isNaN(target) && target != null && target > 0 && qty !== '') {
+        payload.push({ "instrument": instrument, "order_type": "TARGET", "target": target, "qty": qty, "b_s": b_s, "limit": null, "stoploss": null });
     }
 
     if (payload.length == 0) {
