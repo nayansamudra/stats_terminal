@@ -1036,7 +1036,6 @@ function placeOrder() {
     let target = parseInt($('#tg').val())
 
     if (!isNaN(limit) && limit != null && limit >= 0 && qty !== '') {
-        console.log('here');
         payload.push({ "instrument": instrument, "order_type": "NRML", "limit": limit, "qty": qty, "b_s": b_s_nrml, "stoploss": null, "target": null });
     }
 
